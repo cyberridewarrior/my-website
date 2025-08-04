@@ -1,0 +1,437 @@
+/* style.css - Base Styles */
+:root {
+  --primary-color: #3a86ff;
+  --secondary-color: #8338ec;
+  --accent-color: #ff006e;
+  --dark-color: #1a1a2e;
+  --light-color: #f8f9fa;
+  --success-color: #06d6a0;
+  --warning-color: #ffbe0b;
+  --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --font-heading: 'Poppins', sans-serif;
+  --transition-base: all 0.3s ease;
+}
+
+/* portfolio.css - Animations and Enhanced Styles */
+body.portfolio-page {
+  font-family: var(--font-main);
+  color: whitesmoke;
+  background-color: var(--light-color);
+  overflow-x: hidden;
+}
+
+/* Tech Background Animations */
+.tech-bg-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(58,134,255,0.1) 0%, rgba(131,56,236,0.05) 100%);
+  z-index: -1;
+  animation: pulseBackground 15s infinite alternate;
+}
+
+.tech-bg-pattern {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(circle at 10% 20%, rgba(255,0,110,0.03) 0%, transparent 20%);
+  background-size: 50px 50px;
+  z-index: -1;
+  opacity: 0.5;
+  animation: movePattern 60s linear infinite;
+}
+
+/* Navigation Animations */
+.navbar {
+  transition: var(--transition-base);
+}
+
+.menu-toggle {
+  transition: transform 0.3s ease;
+}
+
+.menu-toggle:hover {
+  transform: rotate(90deg);
+}
+
+.nav-links li {
+  position: relative;
+  overflow: hidden;
+}
+
+.nav-links li a::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--primary-color);
+  transition: width 0.3s ease;
+}
+
+.nav-links li a:hover::after,
+.nav-links li a.active::after {
+  width: 100%;
+}
+
+/* Profile Card Animation */
+.profile-card {
+  transition: var(--transition-base);
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.profile-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.avatar {
+  animation: morph 8s ease-in-out infinite;
+  background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+}
+
+/* Skills Tags Animation */
+.skill-tag {
+  display: inline-block;
+  transition: var(--transition-base);
+}
+
+.skill-tag:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Project Cards Animations */
+.projects-grid {
+  perspective: 1000px;
+}
+
+.project-card {
+  transition: var(--transition-base);
+  transform-style: preserve-3d;
+  animation: fadeIn 0.6s ease-out forwards;
+  opacity: 0;
+}
+
+.project-card:nth-child(1) { animation-delay: 0.1s; }
+.project-card:nth-child(2) { animation-delay: 0.2s; }
+.project-card:nth-child(3) { animation-delay: 0.3s; }
+.project-card:nth-child(4) { animation-delay: 0.4s; }
+
+.project-card:hover {
+  transform: translateY(-10px) scale(1.02);
+}
+
+.project-preview {
+  transition: var(--transition-base);
+  transform: translateZ(20px);
+}
+
+.project-card:hover .project-preview {
+  transform: translateZ(30px);
+}
+
+.project-badge {
+  animation: bounce 2s infinite;
+}
+
+/* Filter Buttons Animation */
+.filter-btn {
+  transition: var(--transition-base);
+  position: relative;
+  overflow: hidden;
+}
+
+.filter-btn::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--primary-color);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease;
+}
+
+.filter-btn.active::after,
+.filter-btn:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+/* Skills Meter Animation */
+.skill-level {
+  animation: fillWidth 1.5s ease-out forwards;
+  transform-origin: left;
+}
+
+/* Testimonial Animations */
+.testimonial-card {
+  transition: var(--transition-base);
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+}
+
+.testimonial-content {
+  animation: fadeIn 0.8s ease-out;
+}
+
+/* Footer Animations */
+.back-to-top {
+  transition: var(--transition-base);
+}
+
+.back-to-top:hover {
+  transform: translateY(-3px);
+}
+
+.social-links a {
+  transition: var(--transition-base);
+  display: inline-block;
+}
+
+.social-links a:hover {
+  transform: translateY(-5px) scale(1.1);
+}
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulseBackground {
+  0% { opacity: 0.8; }
+  100% { opacity: 1; }
+}
+
+@keyframes movePattern {
+  0% { background-position: 0 0; }
+  100% { background-position: 1000px 1000px; }
+}
+
+@keyframes morph {
+  0% { border-radius: 60% 40% 30% 70%/60% 30% 70% 40%; }
+  50% { border-radius: 30% 60% 70% 40%/50% 60% 30% 60%; }
+  100% { border-radius: 60% 40% 30% 70%/60% 30% 70% 40%; }
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+  40% { transform: translateY(-10px); }
+  60% { transform: translateY(-5px); }
+}
+
+@keyframes fillWidth {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
+
+/* Responsive Animation Adjustments */
+@media (max-width: 768px) {
+  .nav-links {
+    animation: slideDown 0.5s ease-out;
+  }
+  
+  @keyframes slideDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+}
+
+/* Loading Animation (Optional) */
+.loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--dark-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  animation: fadeOut 1s ease-out 2s forwards;
+}
+
+.loading-spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid rgba(255,255,255,0.3);
+  border-radius: 50%;
+  border-top-color: var(--primary-color);
+  animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes fadeOut {
+  to { opacity: 0; visibility: hidden; }
+}
+/* Add this to your CSS */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--primary-color);
+  color: white;
+  padding: 8px;
+  z-index: 100;
+  transition: top 0.3s;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+.testimonials {
+  padding: 5rem 2rem;
+  position: relative;
+  background: rgba(15, 23, 42, 0.7);
+  backdrop-filter: blur(5px);
+  border-radius: 12px;
+  margin: 4rem auto;
+  max-width: 1200px;
+}
+
+.testimonial-slider {
+  position: relative;
+  margin-top: 3rem;
+  overflow: hidden;
+  min-height: 300px;
+}
+
+.testimonial-slide {
+  position: absolute;
+  width: 100%;
+  transition: all 0.6s cubic-bezier(0.645, 0.045, 0.355, 1);
+  opacity: 0;
+  transform: translateX(100%);
+}
+
+.testimonial-slide.active {
+  position: relative;
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.testimonial-content {
+  background: rgba(30, 41, 59, 0.9);
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: var(--shadow);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: var(--transition);
+}
+
+.client-info {
+  display: flex;
+  align-items: center;
+}
+
+.client-info img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 15px;
+  border: 2px solid var(--primary-color);
+}
+
+.client-info h4 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.client-info span {
+  font-size: 14px;
+  color: #666;
+}
+/* Footer Animations */
+.portfolio-footer {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s ease-out 0.3s forwards;
+}
+
+.footer-content > div {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.footer-content > div:nth-child(1) {
+  animation: fadeInUp 0.6s ease-out 0.4s forwards;
+}
+
+.footer-content > div:nth-child(2) {
+  animation: fadeInUp 0.6s ease-out 0.5s forwards;
+}
+
+.footer-content > div:nth-child(3) {
+  animation: fadeInUp 0.6s ease-out 0.6s forwards;
+}
+
+.footer-bottom {
+  opacity: 0;
+  animation: fadeIn 0.6s ease-out 0.7s forwards;
+}
+
+/* Filter Buttons */
+.project-filters {
+  display: flex;
+  gap: 10px;
+  margin: 30px 0;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  padding: 8px 16px;
+  border: 2px solid var(--primary-color);
+  background: transparent;
+  color: var(--primary-color);
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 600;
+}
+
+.filter-btn.active {
+  background: var(--primary-color);
+  color: white;
+}
+
+.filter-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(58, 134, 255, 0.2);
+}
+/* Project Tech Tags */
+.project-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 15px 0;
+}
+
+.project-tech span {
+  background: #f0f4f8;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  color: #3a86ff;
+  font-weight: 500;
+}

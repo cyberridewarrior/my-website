@@ -1,0 +1,219 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Software Engineering Blog | Odehe Bright</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="blog.css">
+</head>
+<body>
+  <header class="blog-header">
+    <nav class="navbar">
+      <div class="logo-container">
+        <h1 class="logo">Odehe Tech</h1>
+        <div class="logo-dot"></div>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="blog.html" class="active">Blog</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="business.html">Business</a></li>
+        <li><a href="auth.html" class="nav-btn">Login</a></li>
+      </ul>
+      <button class="menu-toggle" aria-label="Toggle menu"><i class="fas fa-bars"></i></button>
+    </nav>
+    <div class="blog-intro">
+      <h1>Software Engineering Insights</h1>
+      <p>Deep dives into frontend, backend, full-stack development and modern programming languages</p>
+    </div>
+  </header>
+
+  <main class="blog-container">
+    <aside class="blog-sidebar">
+      <div class="sidebar-widget">
+        <h3>Categories</h3>
+        <ul class="category-list">
+          <li><a href="#frontend">Frontend Development</a></li>
+          <li><a href="#backend">Backend Development</a></li>
+          <li><a href="#fullstack">Full-Stack Engineering</a></li>
+          <li><a href="#languages">Programming Languages</a></li>
+        </ul>
+      </div>
+      <div class="sidebar-widget">
+        <h3>Popular Tags</h3>
+        <div class="tag-cloud">
+          <a href="#javascript">JavaScript</a>
+          <a href="#react">React</a>
+          <a href="#nodejs">Node.js</a>
+          <a href="#python">Python</a>
+          <a href="#typescript">TypeScript</a>
+        </div>
+      </div>
+    </aside>
+
+    <div class="blog-content">
+      <!-- Frontend Article -->
+      <article class="blog-post" id="frontend">
+        <div class="post-header">
+          <h2>The Evolution of Frontend Development</h2>
+          <div class="post-meta">
+            <span><i class="far fa-calendar"></i> June 15, 2025</span>
+            <span><i class="far fa-clock"></i> 8 min read</span>
+          </div>
+        </div>
+        <div class="post-content">
+          <h3>Core Technologies</h3>
+          <p>Modern frontend development rests on three pillars:</p>
+          <ul>
+            <li><strong>HTML5</strong>: Semantic elements like &lt;article&gt;, &lt;section&gt;, and &lt;nav&gt; improve accessibility and SEO</li>
+            <li><strong>CSS3</strong>: Features like Flexbox and Grid have revolutionized layout design</li>
+            <li><strong>JavaScript ES6+</strong>: Introduced classes, modules, and arrow functions</li>
+          </ul>
+
+          <h3>Framework Comparison</h3>
+          <div class="comparison-table">
+            <table>
+              <thead>
+                <tr>
+                  <th>Framework</th>
+                  <th>Learning Curve</th>
+                  <th>Use Case</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>React</td>
+                  <td>Moderate</td>
+                  <td>SPAs, complex UIs</td>
+                </tr>
+                <tr>
+                  <td>Vue</td>
+                  <td>Easy</td>
+                  <td>Progressive enhancement</td>
+                </tr>
+                <tr>
+                  <td>Angular</td>
+                  <td>Steep</td>
+                  <td>Enterprise apps</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="post-footer">
+          <div class="post-tags">
+            <a href="#html">#HTML5</a>
+            <a href="#css">#CSS3</a>
+            <a href="#javascript">#JavaScript</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Backend Article -->
+      <article class="blog-post" id="backend">
+        <div class="post-header">
+          <h2>Backend Architecture Patterns</h2>
+          <div class="post-meta">
+            <span><i class="far fa-calendar"></i> June 10, 2025</span>
+            <span><i class="far fa-clock"></i> 10 min read</span>
+          </div>
+        </div>
+        <div class="post-content">
+          <h3>Server-Side Technologies</h3>
+          <div class="tech-grid">
+            <div class="tech-card">
+              <h4>Node.js</h4>
+              <ul>
+                <li>Event-driven architecture</li>
+                <li>Non-blocking I/O</li>
+                <li>NPM ecosystem</li>
+              </ul>
+            </div>
+            <div class="tech-card">
+              <h4>Python/Django</h4>
+              <ul>
+                <li>Batteries-included</li>
+                <li>ORM included</li>
+                <li>Admin interface</li>
+              </ul>
+            </div>
+          </div>
+
+          <h3>Database Types</h3>
+          <ul>
+            <li><strong>SQL</strong>: PostgreSQL, MySQL (structured data)</li>
+            <li><strong>NoSQL</strong>: MongoDB, Firebase (flexible schema)</li>
+            <li><strong>Graph</strong>: Neo4j (relationships)</li>
+          </ul>
+        </div>
+        <div class="post-footer">
+          <div class="post-tags">
+            <a href="#backend">#Backend</a>
+            <a href="#nodejs">#Nodejs</a>
+            <a href="#database">#Database</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Full-Stack Article -->
+      <article class="blog-post" id="fullstack">
+        <div class="post-header">
+          <h2>Full-Stack Development Roadmap</h2>
+          <div class="post-meta">
+            <span><i class="far fa-calendar"></i> June 5, 2025</span>
+            <span><i class="far fa-clock"></i> 12 min read</span>
+          </div>
+        </div>
+        <div class="post-content">
+          <h3>Modern Tech Stacks</h3>
+          <div class="stack-cards">
+            <div class="stack-card">
+              <h4>MERN Stack</h4>
+              <ul>
+                <li>MongoDB</li>
+                <li>Express.js</li>
+                <li>React</li>
+                <li>Node.js</li>
+              </ul>
+            </div>
+            <div class="stack-card">
+              <h4>JAMstack</h4>
+              <ul>
+                <li>JavaScript</li>
+                <li>APIs</li>
+                <li>Markup</li>
+              </ul>
+            </div>
+          </div>
+
+          <h3>Essential Skills</h3>
+          <ol>
+            <li>API design (REST, GraphQL)</li>
+            <li>Authentication (JWT, OAuth)</li>
+            <li>Deployment (Docker, CI/CD)</li>
+          </ol>
+        </div>
+        <div class="post-footer">
+          <div class="post-tags">
+            <a href="#fullstack">#Fullstack</a>
+            <a href="#mern">#MERN</a>
+            <a href="#webdev">#WebDev</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </main>
+
+  <footer class="blog-footer">
+    <div class="footer-content">
+      <div class="social-links">
+        <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      </div>
+      <p class="copyright">© 2025 Odehe Bright. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
